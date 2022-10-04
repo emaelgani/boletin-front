@@ -1,8 +1,12 @@
 import React from "react";
 import { FaStream, FaList } from "react-icons/fa";
-import { BoletinRoutes } from "../routes/BoletinRoutes";
+import { useAuthStore } from "../../hook/useAuthStore";
 
 export const Navbar = ({ sidebarRef, rutas }) => {
+
+  const {user} = useAuthStore();
+
+
   const onOpenSideBar = () => {
     sidebarRef.current.className = sidebarRef.current.className + " active";
   };
@@ -38,7 +42,7 @@ export const Navbar = ({ sidebarRef, rutas }) => {
             <ul className="navbar-nav  mb-2 mb-lg-0">
               <li className="nav-item">
                 <a className="nav-link active" aria-current="page" href="#">
-                  Profile
+                  {user?.nombre}
                 </a>
               </li>
             </ul>

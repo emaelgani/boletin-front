@@ -1,6 +1,7 @@
 //ACA SE MANEJAN LAS PETICIONES ASINCRONICAS A SERVICIOS EXTERNOS.
 
 import { useDispatch, useSelector } from "react-redux";
+import { usuarios } from "../data-example/users";
 import { onLogin, onLogout } from "../store";
 
 
@@ -17,9 +18,13 @@ export const useAuthStore = () => {
 
         try {
 
-            if(email === 'emanuelelgani@gmail.com' || email === 'valenrichter22@gmail.com' || email === 'marcoscar2001@gmail.com' && password === '123456'){
+            const {nombre, categoria, telegram_id} = usuarios.find( user => user.email === email );
 
-                dispatch(onLogin({email, password}));
+
+
+            if(user){
+
+                dispatch(onLogin({ nombre, email, password, categoria, telegram_id}));
 
             } else{
                 dispatch(onLogout('Credenciales incorrectas'))

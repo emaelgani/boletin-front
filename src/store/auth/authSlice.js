@@ -3,7 +3,7 @@ export const authSlice = createSlice({
     name: 'auth',
     initialState: {
         status: 'not-authenticated', // authenticated, not-authenticated, checking
-        user:{}, //email - password
+        user:{}, //email - password - tipo - nombre
         errorMessage: undefined
     },
     reducers: {

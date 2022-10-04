@@ -8,8 +8,6 @@ import { store } from "./store/store";
 export const AppBoletin = () => {
   return (
     <Provider store={store}>
-      
-    
       <BrowserRouter>
         <AppRouter />
       </BrowserRouter>

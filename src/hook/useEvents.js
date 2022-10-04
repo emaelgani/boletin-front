@@ -9,7 +9,9 @@ export const useEvents = () => {
 
         try {
             
-        const data =  await boletinApi.post('/events');
+        const data =  await boletinApi.post('/events',{
+            email: email
+        });
             
 
         } catch (error) {

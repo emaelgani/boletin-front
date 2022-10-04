@@ -27,7 +27,7 @@ export const SideBar = ({children}) => {
             <ul className="list-unstyled px-2">
 
                 <li className="">  <NavLink  className={({isActive}) => `text-decoration-none px-3 py-2 d-block ${isActive ? "active" : ""} `} to="/dashboard"> <FaHome/>  Dashboard </NavLink> </li>
-                <li className="">  <NavLink  className={({isActive}) =>  `text-decoration-none px-3 py-2 d-block ${isActive ? "active" : ""} `} to="/page1"> <FaFileAlt/>  Boletín para docentes </NavLink></li>
+                <li className="">  <NavLink  className={({isActive}) =>  `text-decoration-none px-3 py-2 d-block ${isActive ? "active" : ""} `} to="/page1"> <FaFileAlt/>  Boletín para directivos </NavLink></li>
                 <li className=""> <NavLink  className={({isActive}) => `text-decoration-none px-3 py-2 d-block  ${isActive ? "active" : ""} `} to="/page2"> <FaFileAlt/>  Boletín para padres </NavLink></li>
                 <li className=""> <NavLink  className={({isActive}) => `text-decoration-none px-3 py-2 d-block  ${isActive ? "active" : ""} `} to="/page3"> <FaFileAlt/>  Boletín para alumnos </NavLink></li>
        
